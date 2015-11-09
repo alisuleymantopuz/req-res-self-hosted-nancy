@@ -1,0 +1,5 @@
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Store.Contracts\bin\Debug\NorthwindDataServer.Store.Contracts.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Store.Contracts\bin\Debug\NorthwindDataServer.Store.Contracts.pdb
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Store.Contracts\obj\Debug\NorthwindDataServer.Store.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Store.Contracts\obj\Debug\NorthwindDataServer.Store.Contracts.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Store.Contracts\obj\Debug\NorthwindDataServer.Store.Contracts.pdb

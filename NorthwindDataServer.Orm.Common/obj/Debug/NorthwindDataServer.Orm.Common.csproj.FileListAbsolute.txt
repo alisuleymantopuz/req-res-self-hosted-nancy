@@ -1,0 +1,10 @@
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\NorthwindDataServer.Orm.Common.dll.config
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\NorthwindDataServer.Orm.Common.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\NorthwindDataServer.Orm.Common.pdb
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\EntityFramework.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\EntityFramework.xml
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\obj\Debug\NorthwindDataServer.Orm.Common.csprojResolveAssemblyReference.cache
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\obj\Debug\NorthwindDataServer.Orm.Common.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Orm.Common\obj\Debug\NorthwindDataServer.Orm.Common.pdb

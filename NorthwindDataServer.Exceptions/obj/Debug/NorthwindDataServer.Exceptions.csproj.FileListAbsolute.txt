@@ -1,0 +1,6 @@
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Exceptions\bin\Debug\NorthwindDataServer.Exceptions.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Exceptions\bin\Debug\NorthwindDataServer.Exceptions.pdb
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Exceptions\obj\Debug\NorthwindDataServer.Exceptions.ExceptionCodes.resources
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Exceptions\obj\Debug\NorthwindDataServer.Exceptions.csproj.GenerateResource.Cache
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Exceptions\obj\Debug\NorthwindDataServer.Exceptions.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Exceptions\obj\Debug\NorthwindDataServer.Exceptions.pdb

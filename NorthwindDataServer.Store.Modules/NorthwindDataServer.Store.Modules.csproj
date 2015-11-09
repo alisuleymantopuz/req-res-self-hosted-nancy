@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3E187A2-A828-4C2A-992E-D7E11C852489}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NorthwindDataServer.Store.Modules</RootNamespace>
+    <AssemblyName>NorthwindDataServer.Store.Modules</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.1\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Authentication.Token, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Authentication.Token.1.4.0\lib\net40\Nancy.Authentication.Token.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Bootstrappers.Autofac, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Bootstrappers.Autofac.1.4.1\lib\net40\Nancy.Bootstrappers.Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Self, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Self.1.4.0\lib\net40\Nancy.Hosting.Self.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Owin, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Owin.1.4.0\lib\net40\Nancy.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assemblers\AuthenticationModuleAssembler.cs" />
+    <Compile Include="Assemblers\IAuthenticationModuleAssembler.cs" />
+    <Compile Include="Assemblers\IProductModuleAssembler.cs" />
+    <Compile Include="Assemblers\IResponseValueModuleAssembler.cs" />
+    <Compile Include="Assemblers\ProductModuleAssembler.cs" />
+    <Compile Include="Assemblers\ResponseValueModuleAssembler.cs" />
+    <Compile Include="AuthModule.cs" />
+    <Compile Include="ComponentContextExtensions.cs" />
+    <Compile Include="Criterias\ProductCriterias.cs" />
+    <Compile Include="Extensions\ModuleSecurityExtensions.cs" />
+    <Compile Include="Managers\IProductManager.cs" />
+    <Compile Include="Managers\IResponseCodeManager.cs" />
+    <Compile Include="Managers\IUserManager.cs" />
+    <Compile Include="Managers\ProductManager.cs" />
+    <Compile Include="Managers\ResponseCodeManager.cs" />
+    <Compile Include="Managers\UserManager.cs" />
+    <Compile Include="Models\CredentialItem.cs" />
+    <Compile Include="Models\IUserIdentityProvider.cs" />
+    <Compile Include="Models\UserIdentity.cs" />
+    <Compile Include="Models\UserIdentityProvider.cs" />
+    <Compile Include="NancyBootstrapper.cs" />
+    <Compile Include="ProductModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryObject\ProductQueryObject.cs" />
+    <Compile Include="ResponseValueModule.cs" />
+    <Compile Include="ServiceDefinitions\IAuthModule.cs" />
+    <Compile Include="ServiceDefinitions\IProductModule.cs" />
+    <Compile Include="ServiceDefinitions\IResponseValueModule.cs" />
+    <Compile Include="StoreServiceApplicationConfiguration.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NorthwindDataServer.Domain.Authentication\NorthwindDataServer.Domain.Authentication.csproj">
+      <Project>{80f71f2e-aafb-4931-a1fb-1e37d629be88}</Project>
+      <Name>NorthwindDataServer.Domain.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthwindDataServer.Domain.Store\NorthwindDataServer.Domain.Store.csproj">
+      <Project>{f17ca70d-15f1-49ba-9a07-0234c2009dda}</Project>
+      <Name>NorthwindDataServer.Domain.Store</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthwindDataServer.Domain\NorthwindDataServer.Domain.Common.csproj">
+      <Project>{7d3bf8dd-5a1d-45bd-9682-9f1a44eaff36}</Project>
+      <Name>NorthwindDataServer.Domain.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthwindDataServer.Exceptions\NorthwindDataServer.Exceptions.csproj">
+      <Project>{f73fee15-6783-4b49-86ef-606d3c2e9275}</Project>
+      <Name>NorthwindDataServer.Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthwindDataServer.Infastructure\NorthwindDataServer.Infastructure.csproj">
+      <Project>{7559a28a-8db9-4fb5-9ddc-b84d12229099}</Project>
+      <Name>NorthwindDataServer.Infastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthwindDataServer.Orm.Common\NorthwindDataServer.Orm.Common.csproj">
+      <Project>{191cdafa-bc0f-40fb-9877-aa7755c09be0}</Project>
+      <Name>NorthwindDataServer.Orm.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NorthwindDataServer.Store.Contracts\NorthwindDataServer.Store.Contracts.csproj">
+      <Project>{9e72a11f-ee85-4c2a-bf83-c0026017a1c1}</Project>
+      <Name>NorthwindDataServer.Store.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

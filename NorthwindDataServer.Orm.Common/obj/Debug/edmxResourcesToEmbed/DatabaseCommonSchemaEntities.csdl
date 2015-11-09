@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NorthwindDataServerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="NorthwindDataServerCommonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Users" EntityType="NorthwindDataServerModel.User" />
+    <EntitySet Name="UserClaims" EntityType="NorthwindDataServerModel.UserClaim" />
+    <EntitySet Name="Languages" EntityType="NorthwindDataServerModel.Language" />
+    <EntitySet Name="ResponseCodes" EntityType="NorthwindDataServerModel.ResponseCode" />
+    <EntitySet Name="ResponseCodeDescriptions" EntityType="NorthwindDataServerModel.ResponseCodeDescription" />
+    <EntitySet Name="sysdiagrams" EntityType="NorthwindDataServerModel.sysdiagram" />
+    <EntitySet Name="Products" EntityType="NorthwindDataServerModel.Product" />
+    <AssociationSet Name="FK_UserClaims_User" Association="NorthwindDataServerModel.FK_UserClaims_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserClaim" EntitySet="UserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResponseCodeDescription_Language" Association="NorthwindDataServerModel.FK_ResponseCodeDescription_Language">
+      <End Role="Language" EntitySet="Languages" />
+      <End Role="ResponseCodeDescription" EntitySet="ResponseCodeDescriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResponseCodeDescription_ResponseCode" Association="NorthwindDataServerModel.FK_ResponseCodeDescription_ResponseCode">
+      <End Role="ResponseCode" EntitySet="ResponseCodes" />
+      <End Role="ResponseCodeDescription" EntitySet="ResponseCodeDescriptions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Surname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserClaims" Relationship="NorthwindDataServerModel.FK_UserClaims_User" FromRole="User" ToRole="UserClaim" />
+  </EntityType>
+  <EntityType Name="UserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="NorthwindDataServerModel.FK_UserClaims_User" FromRole="UserClaim" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ResponseCodeDescriptions" Relationship="NorthwindDataServerModel.FK_ResponseCodeDescription_Language" FromRole="Language" ToRole="ResponseCodeDescription" />
+  </EntityType>
+  <EntityType Name="ResponseCode">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ResponseCodeDescriptions" Relationship="NorthwindDataServerModel.FK_ResponseCodeDescription_ResponseCode" FromRole="ResponseCode" ToRole="ResponseCodeDescription" />
+  </EntityType>
+  <EntityType Name="ResponseCodeDescription">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="LanguageId" Type="Guid" Nullable="false" />
+    <Property Name="ResponseCodeId" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="Language" Relationship="NorthwindDataServerModel.FK_ResponseCodeDescription_Language" FromRole="ResponseCodeDescription" ToRole="Language" />
+    <NavigationProperty Name="ResponseCode" Relationship="NorthwindDataServerModel.FK_ResponseCodeDescription_ResponseCode" FromRole="ResponseCodeDescription" ToRole="ResponseCode" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="QuantityPerUnit" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="UnitsInStock" Type="Int16" />
+    <Property Name="UnitsOnOrder" Type="Int16" />
+    <Property Name="ReorderLevel" Type="Int16" />
+    <Property Name="Discontinued" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_UserClaims_User">
+    <End Type="NorthwindDataServerModel.User" Role="User" Multiplicity="1" />
+    <End Type="NorthwindDataServerModel.UserClaim" Role="UserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResponseCodeDescription_Language">
+    <End Type="NorthwindDataServerModel.Language" Role="Language" Multiplicity="1" />
+    <End Type="NorthwindDataServerModel.ResponseCodeDescription" Role="ResponseCodeDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ResponseCodeDescription">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResponseCodeDescription_ResponseCode">
+    <End Type="NorthwindDataServerModel.ResponseCode" Role="ResponseCode" Multiplicity="1" />
+    <End Type="NorthwindDataServerModel.ResponseCodeDescription" Role="ResponseCodeDescription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ResponseCode">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ResponseCodeDescription">
+        <PropertyRef Name="ResponseCodeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

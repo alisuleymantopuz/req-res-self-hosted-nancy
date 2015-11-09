@@ -1,0 +1,22 @@
+﻿@using NorthwindDataServer.Store.Modules.Application.Web.Models
+@model CreateTokenModel
+@{
+    ViewBag.Title = "CreateToken";
+}
+
+<h2>Token Authentication | Create Token</h2>
+
+<p>
+    @Html.DisplayNameFor(x => x.Result)
+    @Html.DisplayFor(x => x.Result)
+</p>
+
+@using (Html.BeginForm("CreateToken", "Authentication", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.TextBoxFor(x => x.UserName, new { placeHolder = Html.DisplayNameFor(x => x.UserName) })
+    @Html.PasswordFor(x => x.Password, new { placeHolder = Html.DisplayNameFor(x => x.Password) })
+
+    <input type="submit" value="Create Token">
+}
+

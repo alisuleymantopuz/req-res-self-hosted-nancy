@@ -1,0 +1,12 @@
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\NorthwindDataServer.Infastructure.dll.config
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\NorthwindDataServer.Infastructure.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\NorthwindDataServer.Infastructure.pdb
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\EntityFramework.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\LinqKit.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\EntityFramework.xml
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\LinqKit.pdb
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\bin\Debug\LinqKit.xml
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\obj\Debug\NorthwindDataServer.Infastructure.dll
+C:\Users\a.topuz\Documents\Visual Studio 2013\Projects\NorthwindDataServer\NorthwindDataServer.Infastructure\obj\Debug\NorthwindDataServer.Infastructure.pdb
